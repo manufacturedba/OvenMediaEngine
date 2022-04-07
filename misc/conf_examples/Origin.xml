@@ -64,6 +64,18 @@
 					<ChainCertPath>/certificates/fullchain.pem</ChainCertPath>
 				</TLS>
 			</Host>
+
+			<SignedPolicy>
+				<PolicyQueryKeyName>policy</PolicyQueryKeyName>
+				<SignatureQueryKeyName>signature</SignatureQueryKeyName>
+				<SecretKey>${env:SIGNED_URL_CRYPTO_KEY}</SecretKey>
+
+				<Enables>
+					<Providers>rtmp</Providers>
+					<Publishers>webrtc</Publishers>
+				</Enables>
+			</SignedPolicy>
+
 			<!-- Settings for applications -->
 			<Applications>
 				<Application>
