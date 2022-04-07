@@ -24,10 +24,10 @@ RUN \
 ## Install dependencies
 RUN \
         if [ "$GPU" = "TRUE" ] ; then \
-                ${TEMP_DIR}/misc/install_nvidia_docker_image.sh ; \
-                ${TEMP_DIR}/misc/prerequisites.sh  --enable-nvc ; \
+        ${TEMP_DIR}/misc/install_nvidia_docker_image.sh ; \
+        ${TEMP_DIR}/misc/prerequisites.sh  --enable-nvc ; \
         else \
-                ${TEMP_DIR}/misc/prerequisites.sh ; \
+        ${TEMP_DIR}/misc/prerequisites.sh ; \
         fi
 
 ## Build OvenMediaEngine
@@ -53,7 +53,7 @@ RUN \
 FROM	base AS release
 
 WORKDIR         /opt/ovenmediaengine/bin
-EXPOSE          80/tcp 8080/tcp 8090/tcp 1935/tcp 3333/tcp 3334/tcp 4000-4005/udp 10000-10010/udp 9000/tcp
+EXPOSE          1935/tcp 3333/tcp 3334/tcp 3478/tcp 10000-10010/udp
 COPY            --from=build /opt/ovenmediaengine /opt/ovenmediaengine
 # Default run as Origin mode
 CMD             ["/opt/ovenmediaengine/bin/OvenMediaEngine", "-c", "origin_conf"]
