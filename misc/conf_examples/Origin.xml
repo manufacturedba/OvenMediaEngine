@@ -59,9 +59,9 @@
 					<Name>${env:OME_DOMAIN_NAME}</Name>
 				</Names>
 				<TLS>
-					<CertPath>/certificates/cert.pem</CertPath>
-					<KeyPath>/certificates/privkey.pem</KeyPath>
-					<ChainCertPath>/certificates/fullchain.pem</ChainCertPath>
+					<CertPath>/opt/ovenmediaengine/cert.pem</CertPath>
+					<KeyPath>/opt/ovenmediaengine/privkey.pem</KeyPath>
+					<ChainCertPath>/opt/ovenmediaengine/fullchain.pem</ChainCertPath>
 				</TLS>
 			</Host>
 
