@@ -4,7 +4,7 @@ services:
   origin:
     build:
       context: .
-    image: airensoft/ovenmediaengine:latest
+    image: manufacturedba/ovenmediaengine:latest
     ports:
       - "1935:1935/tcp"
       - "3334:3334/tcp"
@@ -23,7 +23,7 @@ services:
   edge:
     build:
       context: .
-    image: airensoft/ovenmediaengine:latest
+    image: manufacturedba/ovenmediaengine:latest
     ports:
       - "1935:1935/tcp"
       - "3334:3334/tcp"
